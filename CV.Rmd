@@ -1,0 +1,29 @@
+---
+title: "Curriculum Vitae"
+author: "Fatima Danawar"
+date: "2023-11-21"
+output: html_document
+---
+# Persoonlijke Informatie:
+## Fatima Danawar
+- Adres: Fazantenstraat 63, 3815AM, Amersfoort
+- Telefoon: 06-21282608
+- E-mail: fatimadanawar96@gmail.com
+- LinkedIn: [Fatima Danawar]
+- GitHub: [Fatimadanawar]
+
+# Opleiding:
+## Propedeuse B Life Science
+- Hogeschool Utrecht, Diploma gehaald
+## Propedeuse in Farmacie
+- Universiteit Albaath/ Syrie, Diploma gehaald
+
+#Werkervaring
+## Apotheek-assistent
+### Apotheek in Syrie, 5 maanden werken
+
+# Vaardigheden
+- Programmeertalen: R, bash
+- MC: Word, Excel, Powerpoint
+- Talen: Arabisch(modertaal), Nederlands(B2 niveau), Engels(B1 niveau)
+- Rijbewijs
