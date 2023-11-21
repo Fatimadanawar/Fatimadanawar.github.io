@@ -1,0 +1,16 @@
+---
+title: "Leerplan"
+author: "Fatima Danawar"
+date: "2023-11-21"
+output: html_document
+---
+#Doel: In de komende 2 jaar wil ik me leiden van een eigen onderzoekproject op het gebied van biomoleculaire interacties en hun rol in ziekteprocessen.
+
+# Huidige Status: Actief betroken bij lopende projecten en continue professionele ontwikkeling.
+
+# Volgende Vaardigheden om te leren: implementatie van geavanceerde bio-informatica-tools voor systematische analyse van omics-data.
+
+#Leerplan:
+- Maand 11-1: Voltooien van cursus "Data Science for biologie deel 2".
+- Maand 2-7 : Voltooien van specialitatie "Bio-Moleculaire Research".
+- Maand 9-12: Werken aan een eigen bioinformatica-project met behulp van openbare omics-datasets. 
