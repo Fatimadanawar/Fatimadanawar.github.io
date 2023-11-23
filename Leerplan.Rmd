@@ -4,13 +4,23 @@ author: "Fatima Danawar"
 date: "2023-11-21"
 output: html_document
 ---
-#Doel: In de komende 2 jaar wil ik me leiden van een eigen onderzoekproject op het gebied van biomoleculaire interacties en hun rol in ziekteprocessen.
+#Doel: 
+Over twee jaar wil ik bekwaam zijn in het uitvoeren en interpreteren van Whole Exome Sequencing (WES) met een specialisatie in het identificeren van genetische oorzaken van zeldzame genetische aandoeningen, zoals het KBG-syndroom. Ik streef ernaar een waardevolle bijdrage te leveren aan genetisch onderzoek en betrokken te zijn bij projecten gericht op het begrijpen van de genetische basis van dergelijke aandoeningen.
 
-# Huidige Status: Actief betroken bij lopende projecten en continue professionele ontwikkeling.
+# Huidige Status: 
+Op dit moment heb ik een basisbegrip van levenswetenschappen en enige kennis van data science en bio-informatica. Ik ben vertrouwd met de algemene stappen van WES, maar ik moet mijn kennis verdiepen en praktische vaardigheden ontwikkelen in het analyseren van genoomgegevens.
 
-# Volgende Vaardigheden om te leren: implementatie van geavanceerde bio-informatica-tools voor systematische analyse van omics-data.
+# Volgende Vaardigheden om te leren: 
+De volgende vaardigheid die ik wil leren, is het geavanceerd analyseren en interpreteren van genoomgegevens met een specifieke focus op het KBG-syndroom. Dit omvat geavanceerde methoden voor variant calling, annotatie, en begrip van de functionele impact van genetische varianten.
 
 #Leerplan:
-- Maand 11-1: Voltooien van cursus "Data Science for biologie deel 2".
-- Maand 2-7 : Voltooien van specialitatie "Bio-Moleculaire Research".
-- Maand 9-12: Werken aan een eigen bioinformatica-project met behulp van openbare omics-datasets. 
+- Dag 1-2: Zelfstudie
+Bestudeer relevante literatuur over Whole Exome Sequencing en genoominterpretatie.
+Identificeer belangrijke concepten, tools en technieken die worden gebruikt bij WES.
+
+- Dag 3: Online Cursus
+Schrijf je in voor een gerichte online cursus over genoomanalyse en variant calling.
+Volg de cursus om inzicht te krijgen in geavanceerde analysetechnieken.
+
+- Dag 4: Praktische Oefening
+Werk aan een klein praktisch project waarbij je genoomgegevens analyseert (dit kan een openbare dataset zijn).
