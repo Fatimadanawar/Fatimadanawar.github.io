@@ -32,3 +32,4 @@ output: html_document
 -Overdragen van opgedane kennis in het lab aan collega's binnen Sylics.
 -Het schrijven van een verslag over de theoretische achtergrond en resultaten
 
+Diep zoeken over de genitische afdeling
