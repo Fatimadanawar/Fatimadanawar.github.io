@@ -21,7 +21,7 @@ library(vitae)
  * Ik ben gevlucht van mijn land door de oorlog naar Nederland van 5 jaar geleden
  * Ik ben student en moeder voor drie kinderen in het zelfde tijd
  * Ik heb Farmacie opleiding gestudeerd in mijn land maar niet afgemaakt.
- * IK ben nu bezig met B Life Science HBO opleiding
+ * Ik ben nu bezig met B Life Science HBO opleiding
  * Mijn minor is data science
  * Mijn specialisatie is BMR(Bio-Moleculaire Research)
  * Ik ben ambitieus en ik wil mijn doel bereiken.
@@ -36,10 +36,13 @@ Enthousiaste Life Science student op zoek naar een uitdagende stage om praktisch
 library(tibble)
 tribble(
   ~ Degree, ~ Year, ~ Institution, ~ Where,
-  "Basisschool onderwijs", "2000-2009", "Hyteenschool", "Hama, Syrie",
-  "Middelbareschool", "2010-2013", "Alchansaaschool", "Hama, Syrie",
+  "B Life Science opleiding", "2020- heden", "Hogeschool Utrecht HU", "Utrecht, Nederland",
   "Farmacie Opleiding", "2014-2016", "Albaath Universiteit", "Homs, Syrie",
-  "B Life Science opleiding", "2020- Tot nu", "Hogeschool Utrecht HU", "Utrecht, Nederland"  
+  "Middelbareschool", "2010-2013", "Alchansaaschool", "Hama, Syrie",
+  "Basisschool onderwijs", "2000-2009", "Hyteenschool", "Hama, Syrie"
+  
+  
+    
 ) %>% 
   detailed_entries(Degree, Year, Institution, Where)
 ```
@@ -49,8 +52,9 @@ tribble(
 ```{r}
 tribble(
   ~Year, ~Type, ~Desc,
-  2015, "Apotheker-assistent", "Ik ben gewerkt voor ongeveer een jaar tijdens mijn studie in het Apotheek in mijn land als apotheker-assistent",
-  2018, "Vrijwilligerswerk", "Ik ben gewerkt als vrijwiliger in taalcafe in het achterhoek wijk van Nederland"
+   2018, "Vrijwilligerswerk", "Ik heb gewerkt als vrijwiliger in taalcafe in het achterhoek wijk van Nederland",
+  2015, "Apotheker-assistent", "Ik ben gewerkt voor ongeveer een jaar tijdens mijn studie in het Apotheek in mijn land als apotheker-assistent"
+ 
 ) %>% 
   brief_entries(
     glue::glue("Werkervaring als {Type}"),
