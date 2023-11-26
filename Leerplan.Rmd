@@ -4,7 +4,7 @@ author: "Fatima Danawar"
 date: "2023-11-21"
 output: html_document
 ---
-#Doel: 
+# Doel: 
 Over twee jaar wil ik bekwaam zijn in het uitvoeren en interpreteren van Whole Exome Sequencing (WES) met een specialisatie in het identificeren van genetische oorzaken van zeldzame genetische aandoeningen, zoals het KBG-syndroom. Ik streef ernaar een waardevolle bijdrage te leveren aan genetisch onderzoek en betrokken te zijn bij projecten gericht op het begrijpen van de genetische basis van dergelijke aandoeningen.
 
 # Huidige Status: 
@@ -13,7 +13,7 @@ Op dit moment heb ik een basisbegrip van levenswetenschappen en enige kennis van
 # Volgende Vaardigheden om te leren: 
 De volgende vaardigheid die ik wil leren, is het geavanceerd analyseren en interpreteren van genoomgegevens met een specifieke focus op het KBG-syndroom. Dit omvat geavanceerde methoden voor variant calling, annotatie, en begrip van de functionele impact van genetische varianten.
 
-#Leerplan:
+# Leerplan:
 - Dag 1-2: Zelfstudie
 Bestudeer relevante literatuur over Whole Exome Sequencing en genoominterpretatie.
 Identificeer belangrijke concepten, tools en technieken die worden gebruikt bij WES.
