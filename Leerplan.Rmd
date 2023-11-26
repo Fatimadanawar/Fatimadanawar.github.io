@@ -17,10 +17,8 @@ De volgende vaardigheid die ik wil leren, is het geavanceerd analyseren en inter
 - Dag 1-2: Zelfstudie
 Bestudeer relevante literatuur over Whole Exome Sequencing en genoominterpretatie.
 Identificeer belangrijke concepten, tools en technieken die worden gebruikt bij WES.
-
 - Dag 3: Online Cursus
 Schrijf je in voor een gerichte online cursus over genoomanalyse en variant calling.
 Volg de cursus om inzicht te krijgen in geavanceerde analysetechnieken.
-
 - Dag 4: Praktische Oefening
 Werk aan een klein praktisch project waarbij je genoomgegevens analyseert (dit kan een openbare dataset zijn).
