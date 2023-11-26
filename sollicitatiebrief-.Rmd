@@ -1,0 +1,64 @@
+---
+title: "Sollicitatiebrief"
+author: "Fatima Danawar"
+date: "2023-11-26"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Fatima Danawar
+
+Fazantentstraat 63,
+
+3815AM, Amersfoort
+
+
+
+dr. G.W. (Gijs) van Haaften
+
+UMC Utrecht, 
+
+Genetica afdeling, Onderzoekgroep
+
+Heidelberglaan 100, 
+
+3584 CX, Utrecht
+
+
+Betreft: Sollicitatie voor Stage - Further Delineation of the KBG Syndrome Phenotype Caused by ANKRD11 Aberrations
+
+
+Geachte dr. G.W. (Gijs) van Haaften,
+
+Met grote betrokkenheid schrijf ik u aan om mijn interesse uit te drukken in het stageprogramma binnen uw onderzoeksgroep, gericht op de verdere omschrijving van het KBG-syndroom fenotype veroorzaakt door ANKRD11 aberraties. De persoonlijke betrokkenheid die ik heb als ouder van een kind met het KBG-syndroom, gecombineerd met mijn verlangen om meer te leren over data-analyse, met name met behulp van GATK-tools, motiveren mij om deel te nemen aan uw gerenommeerde organisatie.
+
+# Over mij:
+
+Als ouder van een kind dat is gediagnosticeerd met het KBG-syndroom, ben ik diep betrokken bij het begrijpen van de genetische basis en de impact ervan op het dagelijks leven. Mijn persoonlijke ervaring heeft mijn interesse gewekt in het bijdragen aan het begrip van het KBG-syndroom en heeft me aangespoord om deel te nemen aan onderzoeksinspanningen om het fenotype verder te karakteriseren.
+Ik ben momenteel een enthousiaste student [B Life Science opleiding en ik zit in het derde jaar]. Mijn passie voor genetisch onderzoek en de impact ervan op de klinische praktijk heeft me aangemoedigd om een stage te zoeken waar ik mijn theoretische kennis kan omzetten in praktische ervaring.
+
+
+# Reden voor Keuze:
+
+Uw onderzoeksgroep staat bekend om zijn toewijding aan genetisch onderzoek, en ik ben ervan overtuigd dat mijn betrokkenheid als ouder van een kind met het KBG-syndroom een waardevolle perspectief zal bieden aan uw project. Het leren gebruiken van GATK-tools is voor mij een manier om meer bij te dragen aan het begrip van genetische fenotypes.
+
+# Waarom GATK-tools en Data-analyse:
+
+Ik ben specifiek geïnteresseerd in het gebruik van GATK-tools vanwege hun cruciale rol bij het identificeren van genetische variaties. Ik ben ervan overtuigd dat deze stage me zal voorzien van de nodige expertise in geavanceerde data-analysemethoden en me zal helpen begrijpen hoe genetische gegevens worden geïnterpreteerd en toegepast in de klinische context.
+
+# Wat ik hoop te bereiken:
+
+Mijn doel tijdens deze stage is tweeledig: ik wil niet alleen meer leren over de data-analyse van genetische gegevens, maar ook mijn persoonlijke ervaringen inbrengen om bij te dragen aan een holistisch begrip van het KBG-syndroom. Ik ben vastbesloten om mijn bijdrage te leveren aan het onderzoek dat de levens van individuen met het KBG-syndroom kan verbeteren.
+
+# Afsluiting:
+
+Ik ben zeer gemotiveerd om deel uit te maken van uw team en ben enthousiast over de kans om bij te dragen aan het verdere begrip van het KBG-syndroom. Graag zou ik de mogelijkheid hebben om mijn betrokkenheid en enthousiasme persoonlijk toe te lichten in een gesprek.
+
+Dank u voor uw overweging van mijn sollicitatie. Ik kijk er met spanning naar uit om van u te horen en verdere details te bespreken.
+
+Met vriendelijke groet,
+
+Fatima Danawar
