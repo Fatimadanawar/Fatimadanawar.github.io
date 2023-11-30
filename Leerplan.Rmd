@@ -5,20 +5,40 @@ date: "2023-11-21"
 output: html_document
 ---
 # Doel: 
-Over twee jaar wil ik bekwaam zijn in het uitvoeren en interpreteren van Whole Exome Sequencing (WES) met een specialisatie in het identificeren van genetische oorzaken van zeldzame genetische aandoeningen, zoals het KBG-syndroom. Ik streef ernaar een waardevolle bijdrage te leveren aan genetisch onderzoek en betrokken te zijn bij projecten gericht op het begrijpen van de genetische basis van dergelijke aandoeningen.
+Over ~2 jaar wil ik een ervaren professional zijn in het interpreteren van Whole Exome Sequencing (WES) met een specialisatie in het identificeren van genetische oorzaken van zeldzame genetische aandoeningen, met name het KBG-syndroom. Ik wil diepere expertise ontwikkelen in het gebruik van geavanceerde tools zoals GATK om nauwkeurige genetische analyses uit te voeren.
 
 # Huidige Status: 
-Op dit moment heb ik een basisbegrip van levenswetenschappen en enige kennis van data science en bio-informatica. Ik ben vertrouwd met de algemene stappen van WES, maar ik moet mijn kennis verdiepen en praktische vaardigheden ontwikkelen in het analyseren van genoomgegevens.
+Op dit moment heb ik basiskennis van Whole Exome Sequencing en begrijp ik de algemene principes van genetische analyses. Ik heb ervaring met het interpreteren van genetische data, maar ik mis specifieke kennis van het gebruik van GATK-tools voor geavanceerde analyses.
 
 # Volgende Vaardigheden om te leren: 
-De volgende vaardigheid die ik wil leren, is het geavanceerd analyseren en interpreteren van genoomgegevens met een specifieke focus op het KBG-syndroom. Dit omvat geavanceerde methoden voor variant calling, annotatie, en begrip van de functionele impact van genetische varianten.
+De volgende vaardigheid die ik moet leren, is het effectief gebruik van GATK-tools voor genetische data-analyse. Dit omvat het begrijpen van de tools, het uitvoeren van variant calling, en het interpreteren van de resultaten voor het identificeren van genetische varianten.
 
 # Leerplan:
-- Dag 1-2: Zelfstudie
-Bestudeer relevante literatuur over Whole Exome Sequencing en genoominterpretatie.
-Identificeer belangrijke concepten, tools en technieken die worden gebruikt bij WES.
-- Dag 3: Online Cursus
-Schrijf je in voor een gerichte online cursus over genoomanalyse en variant calling.
-Volg de cursus om inzicht te krijgen in geavanceerde analysetechnieken.
-- Dag 4: Praktische Oefening
-Werk aan een klein praktisch project waarbij je genoomgegevens analyseert (dit kan een openbare dataset zijn).
+
+## Dag 1 : Data voorbereiden en uitlijnen:
+-	Humane referentiegenoom FASTA-sequentie ( GRCH38): er is op de HU server ( /home/daur2/rnaseq/hg38_genome/GRCh38.primary_assembly.genome.fa )
+-	GATK-documentatie voor uitlijning kijken en eventuele aanvullende hulpprogramma’s die nodig zijn voor uitlijning downloaden.
+-	FASTQ-bestanden voorbereiden, zorg ervoor dat ze van goede kwaliteit zijn.
+-	Voer de uitlijning van de reads uit naar de referentiegenoomsequenstie.
+-	Indexeer de uitgelijnde BAM-bestanden
+-	Begrijp en controleer de kwaliteit van de uitgelijnde gegevens.
+
+## Dag 2: Variant calling en mutatie-identificatie
+-	Roep varianten op met GATK HaplotypeCaller of een vergelijkbaar gereedschap.
+-	Voer een basisvariantanalyse uit om de opgeroepen varianten te begrijpen.
+-	Filter de varianten met basis van kwaliteitscriteria.
+-	Identificeer de mutaties door de opgeroepen varianten te analyseren.
+-	Documenteer de geïdentificeerde mutatie en genereer een lijst met potentiële interessante varianten.
+
+## Dag 3: Verfijnen en rapporteren
+-	Verbeter de workflow en scripts.
+-	Voer aanvullende analyse uit om de betrouwbaarheid van de geïdentificeerde mutaties te bevestigen.
+-	Werk aan een korte rapport.
+-	Zorg ervoor dat al code netjes is georganiseerd.
+-	Zorg ervoor een goede documentatie.
+
+#De linken naar de FASTQ bestanden en VCF bestande:
+##FASTQ: https://www.internationalgenome.org/data-portal/sample/HG00138
+Met Sequence en Exome gekozen.
+##VCF: https://www.internationalgenome.org/data-portal/sample/HG00138
+Met Variants gekozen   hier staan 20 bestanden bij verschillende chromosomen.
