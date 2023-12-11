@@ -28,7 +28,7 @@ Om data op te laden gebruik ik hier "read_excel()" functie samen met "here()" fu
 
 ```{r include=FALSE}
 # Lees het Excel-bestand in
-c.elegans_data <- readxl::read_excel(here("data/CE.LIQ.FLOW.062_Tidydata.xlsx"))
+c.elegans_data <- readxl::read_excel(here::here("data/CE.LIQ.FLOW.062_Tidydata.xlsx"))
 ```
 
 In de onderstaande tabel worden de gegevens weergegeven. Deze datatable wordt gegenereerd met behulp van de "datatable()" functie, waarbij de optie scrollx is ingesteld op true. Hierdoor is het mogelijk om door alle gegevens te scrollen.

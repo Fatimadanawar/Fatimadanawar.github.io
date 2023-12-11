@@ -124,7 +124,7 @@ gapminder_data_table
 
 Bij onderstande figuur, het is de opgeslaagde SQL script
 ```{r figuur van SQL script}
-sql_script <- rasterGrob(as.raster(readPNG(here("Images/saved_sqlscript.png"))))
+sql_script <- rasterGrob(as.raster(readPNG(here("Portfolio/Images/saved_sqlscript.png"))))
 
 # laat de figuur zien
 grid.arrange(sql_script)
@@ -133,7 +133,7 @@ grid.arrange(sql_script)
 ## Samenvoegende table van alle drie data
 De sql script van het samenvogen table van alle drie data is in onderstaande figuur
 ```{r sql script van het samenvoegen van alle drie data tot een table}
-samenvogende_sqlscript <- rasterGrob(as.raster(readPNG(here("Images/samenvoegende_table.png"))))
+samenvogende_sqlscript <- rasterGrob(as.raster(readPNG(here("Portfolio/Images/samenvoegende_table.png"))))
 grid.arrange(samenvogende_sqlscript)
 ```
 
