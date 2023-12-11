@@ -1,0 +1,100 @@
+---
+title: "Portfolio"
+author: "Fatima"
+date: "2024"
+site: bookdown::bookdown_site
+documentclass: book
+new_session: yes
+output:
+  bookdown::gitbook:
+    highlight: tango
+bibliography: [book.bib]
+params:
+  country: "Netherlands"
+  year: "2024"
+  continent: "Europe"
+
+  
+  #bookdown::pdf_book: default
+---
+---
+title: "Portfolio"
+author: "Fatima"
+date: "2024"
+site: bookdown::bookdown_site
+documentclass: book
+new_session: yes
+output:
+  bookdown::gitbook:
+    highlight: tango
+bibliography: [book.bib]
+params:
+  country: "Netherlands"
+  year: "2024"
+  continent: "Europe"
+
+  
+  #bookdown::pdf_book: default
+---
+
+<!--chapter:end:index.Rmd-->
+
+
+# Voorbeeld data analyse ( Analyse van C. elegans Plaatexperiment)
+
+Placeholder
+
+
+
+<!--chapter:end:C_elegans_plaatexperiment.Rmd-->
+
+# My CV with `vitae` R package
+
+```{r CV, echo=F, out.width="100%", out.height=1000}
+knitr::include_graphics('doc/CV.pdf')
+```
+
+## Script
+The script I have used for creating this CV can be seen [here](https://github.com/Fatimadanawar/Workflow-Portfolio/blob/main/doc/CV.Rmd) on my github.
+
+
+
+<!--chapter:end:CV.Rmd-->
+
+
+# Doel: 
+
+Placeholder
+
+
+## Dag 1 : Data voorbereiden en uitlijnen:
+## Dag 2: Variant calling en mutatie-identificatie
+## Dag 3: Verfijnen en rapporteren
+
+<!--chapter:end:Leerplan.Rmd-->
+
+
+# Reproducibility
+
+Placeholder
+
+
+## Artikel kezien en werken met het
+### Reference van dit artikel:
+### Criteria van dit artikel
+### Meer informatie over dit artikel
+### Werken met code van artikel (R code paper)
+### Data management ----
+### Output ----
+
+<!--chapter:end:Peerreview_openen.Rmd-->
+
+
+# Relationele databases en SQL
+
+Placeholder
+
+
+
+<!--chapter:end:SQL.Rmd-->
+

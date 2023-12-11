@@ -12,7 +12,7 @@ Om mijn vaardigheden in het werken met basisdatasets te laten zien, heb ik gegev
 De dataset is aangeleverd door J. Louter (INT/ILC)
 
 Het is een aantal libraries nodig om de data te laden.
-```{r setup, message=FALSE}
+```{r, message=FALSE}
 # Installeer en laad het readxl-pakket en DT-pakket voor vervolgens analyse
 library(here)
 library(tidyverse)
