@@ -1,0 +1,19 @@
+---
+title: "Portfolio"
+author: "Fatima"
+date: "2024"
+site: bookdown::bookdown_site
+documentclass: book
+new_session: yes
+output:
+  bookdown::gitbook:
+    highlight: tango
+bibliography: [book.bib]
+params:
+  country: "Netherlands"
+  year: "2024"
+  continent: "Europe"
+
+  
+  #bookdown::pdf_book: default
+---

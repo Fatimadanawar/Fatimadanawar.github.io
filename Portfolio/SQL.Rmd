@@ -1,0 +1,155 @@
+---
+title: "Relationele databases en SQL"
+author: "Fatima Danawar"
+date: "2023-12-10"
+output: html_document
+---
+
+# Relationele databases en SQL
+In dit versalg voeg ik drie sets gegevens toe aan een SQL-database en maak ik drie grafieken om mijn vaardigheden in R en SQL te laten zien. Werken met databases zoals SQL is handig voor het beheren van veel gegevens.
+
+Alle benodige libraries laden
+```{r, message=FALSE}
+library(tidyverse)
+library(here)
+library(dslabs)
+library(grid)
+library(readr)
+library(RPostgreSQL)
+library(gridExtra)
+library(ggpubr)
+library(stringr)
+library(png)
+library(DT)
+library(ggplot2)
+```
+
+In dit chunk heb ik de alle data van github geladen en daarna heb ik alle data wel een tidy gemaakt met behulp met verschillende functies om daarna alle drie data samen met elkaar toe te voegen.
+En worden alle data als csv en rds opgeslagd.
+
+```{r}
+# Flu data laden
+
+flu_data <- read_csv("https://raw.githubusercontent.com/DataScienceILC/tlsc-dsfb26v-20_workflows/main/data/flu_data.csv", skip = 10)
+
+# Laten we zien de inhoud van de eerste 10 regels van flu data
+datatable(flu_data, options = list(scrollx=TRUE, pageLength = 10))
+
+# Dengue data laden
+dengue_data <- read_csv("https://raw.githubusercontent.com/DataScienceILC/tlsc-dsfb26v-20_workflows/main/data/dengue_data.csv", skip = 10)
+
+# Laten we zien de inhoud van de eerste 10 regels van dengue data
+datatable(dengue_data, options = list(scrollx=TRUE, pageLength = 10))
+
+# Gapminder data van de dslabs package
+gapminder_data <- gapminder
+
+# Laten we zien de inhoud van de eerste 10 regels van gapminder data
+datatable(gapminder_data, options = list(scrollx=TRUE, pageLength = 10))
+
+# Flu data tidy maken
+flu_data_tidy <- flu_data %>% pivot_longer(cols = -Date, names_to = "country", values_to = "flu_aantal")
+
+# Verwijder de dag en de maand van de Date kolom, hernomen van de Date kolom naar Year en aanpassen van variabelen data typen 
+flu_data_tidy$Date <- str_sub(flu_data_tidy$Date, start = 1, end = 4)
+flu_data_tidy <- rename(flu_data_tidy, year = Date)
+flu_data_tidy$country <- as.factor(flu_data_tidy$country)
+flu_data_tidy$year <- as.integer(flu_data_tidy$year)
+
+# Laten we zien hoe ziet de data nu eruit
+datatable(flu_data_tidy, options = list(scrollx=TRUE, pageLength = 10))
+
+# Dengue data tidy maken
+dengue_data_tidy <- dengue_data %>% pivot_longer(cols = -Date, names_to = "country", values_to = "dengue_aantal")
+
+# Verwijder de dag en de maand van de Date kolom, hernomen van de Date kolom naar Year en aanpassen van variabelen data typen
+dengue_data_tidy$Date <- str_sub(dengue_data_tidy$Date, start = 1, end = 4)
+dengue_data_tidy <- rename(dengue_data_tidy, year = Date)
+dengue_data_tidy$year <- as.integer(dengue_data_tidy$year)
+dengue_data_tidy$country <- as.factor(dengue_data_tidy$country)
+
+#Laten we zien hoe ziet de data nu eruit
+datatable(dengue_data_tidy, options = list(scrollx=TRUE, pageLength = 10))
+
+# Opslaan alle drie dataframes als csv en rds bestanden
+# Als csv bestanden
+write.csv(flu_data_tidy, file = here("data/flu.csv"), row.names = FALSE)
+write.csv(dengue_data_tidy, file = here("data/dengue.csv"), row.names = FALSE)
+write.csv(gapminder_data, file = here("data/gapminder_data.csv"), row.names = FALSE)
+
+# Als rds bestanden
+saveRDS(flu_data_tidy, file = here("data/flu_data.rds"))
+saveRDS(dengue_data_tidy, file = here("data/dengue_data.rds"))
+saveRDS(gapminder_data, file = here("data/gapminder_data.rds"))
+```
+
+De volgende stap is het maken van nieuwe PostgreSQL database op DBeaver met dit code : create database workflowsdb.
+
+
+# Maak verbinding met de database
+con <- dbConnect(RPostgres::Postgres(),
+                                 dbname = "workflowsdb",
+                                 host = "localhost",
+                                 port = "5432",
+                                 user = "postgres",
+                                 password = "Fatima1996@")
+# SQL-scripts voor het schrijven van tabellen naar de database vanuit dataframes
+
+dbWriteTable(con, "flu_data_table", flu_data_tidy, overwrite = TRUE)
+dbWriteTable(con, "dengue_data_table", dengue_data_tidy, overwrite = TRUE)
+dbWriteTable(con, "gapminder_data_table", gapminder_data, overwrite = TRUE)
+
+# Disconnect van de database
+dbDisconnect(con)
+
+
+
+# inhoud bekijken van flu_data_table
+select 
+*
+from 
+flu_data_table 
+
+  
+# inhoud bekijken van dengue_data_table
+select 
+*
+from 
+dengue_data_table  
+
+
+# inhoud bekijken van gapminder_data_table
+select 
+*
+from 
+gapminder_data_table
+
+
+Bij onderstande figuur, het is de opgeslaagde SQL script
+```{r figuur van SQL script}
+sql_script <- rasterGrob(as.raster(readPNG(here("Portfolio/Images/saved_sqlscript.png"))))
+
+# laat de figuur zien
+grid.arrange(sql_script)
+```
+
+De sql script van het samenvogen table van alle drie data is in onderstaande figuur
+```{r sql script van het samenvoegen van alle drie data tot een table}
+samenvogende_sqlscript <- rasterGrob(as.raster(readPNG(here("Portfolio/Images/samenvoegende_table_sqlscript.png"))))
+grid.arrange(samenvogende_sqlscript)
+```
+
+Het laden van de samengevoegde table 
+```{r ladan van de samengevoegde table}
+samengevoegde_table_data <- read.csv(here("data/samenvoegen_table_202312110018.csv"))
+# laten we de inhoud zien
+datatable(samengevoegde_table_data, options = list(scrollx=TRUE, pageLength = 10))
+```
+
+In dit project heb ik gegevens samengevoegd van verschillende tabellen en beschrijvende statistieken gegenereerd. Hieronder vindt u een overzicht van mijn aanpak en de resultaten.
+```{r}
+# Symmary statistieken
+summary(samengevoegde_table_data)
+
+# Visualisatie 1: 
+```
