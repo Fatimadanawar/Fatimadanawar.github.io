@@ -1,0 +1,12 @@
+# Curriculum Vitae
+
+## Mijn CV met `vitae` R package
+
+```{r CV, echo=F, out.width="100%", out.height=1000}
+knitr::include_graphics('C:/Users/Laptop/Downloads/Workflow-Portfolio/Portfolio/doc/CV.pdf')
+```
+
+## Script
+The script I have used for creating this CV can be seen [here](https://github.com/Fatimadanawar/Workflow-Portfolio/blob/main/doc/CV.Rmd) on my github.
+
+

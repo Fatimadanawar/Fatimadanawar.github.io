@@ -1,0 +1,114 @@
+---
+title: "Portfolio-opdracht 1.1"
+author: "Fatima Danawar"
+date: "2023-12-06"
+output: html_document
+---
+
+# Voorbeeld data analyse ( Analyse van C. elegans Plaatexperiment)
+Dit hoofdstuk bevat een gedetailleerde analyse van een C. elegans plaatexperiment. ik zal de gegevens verkennen, visualiseren en analyseren om inzicht te krijgen in de effecten van verschillende verbindingen en concentraties op het aantal nakomelingen.
+
+Om mijn vaardigheden in het werken met basisdatasets te laten zien, heb ik gegevens uit een C. elegans-experiment geïmporteerd en een paar grafieken gemaakt op basis van deze gegevens.
+De dataset is aangeleverd door J. Louter (INT/ILC)
+
+Het is een aantal libraries nodig om de data te laden.
+```{r, message=FALSE}
+# Installeer en laad het readxl-pakket en DT-pakket voor vervolgens analyse
+library(here)
+library(tidyverse)
+library(readxl)
+library(DT)
+library(ggplot2)
+library(dplyr)
+```
+
+ik begin met het laden van de gegevens uit het Excel-bestand met behulp van het `readxl`-pakket.
+Om data op te laden gebruik ik hier "read_excel()" functie samen met "here()" functie. De read_excel wordt gebruikt om de excel files op te laden in RStudio. 
+
+
+```{r include=FALSE}
+# Lees het Excel-bestand in
+c.elegans_data <- readxl::read_excel(here("data/CE.LIQ.FLOW.062_Tidydata.xlsx"))
+```
+
+In de onderstaande tabel worden de gegevens weergegeven. Deze datatable wordt gegenereerd met behulp van de "datatable()" functie, waarbij de optie scrollx is ingesteld op true. Hierdoor is het mogelijk om door alle gegevens te scrollen.
+
+```{r}
+# de data laden in datatable
+datatable(c.elegans_data, options = list(scrollx=TRUE))
+```
+
+```{r}
+# datatypes en variabelen controleren
+str(c.elegans_data)
+```
+
+Na het importeren van de gegevens heb ik gecontroleerd welke klassen aan de variabelen waren toegewezen. De meeste variabelen waren correct geïmporteerd. compConcentration werd als een character geïmporteerd, maar het moet een numeric zijn, anders zou de plot er als volgt uitzien:
+
+```{r, warning=FALSE, message=FALSE}
+# grafiek met een spreidingsdiagram maken
+ggplot(data = c.elegans_data, aes(x = compConcentration, y = RawData)) +
+  geom_point(aes(color = compName, 
+                 shape = expType),
+             size = 1.5, alpha = 0.8)+
+  labs(title = "effect van de verbindingsconcentratie op de hoeveelheid levende C. elegans",
+       x = "Aantal nakomelingen",
+       y = "Concentratie van compound") +
+  theme_minimal()
+```
+
+Omdat de compConcentration variable als character datatype is, is het niet de juiste plot uitzien.
+
+```{r, warning=FALSE, message=FALSE}
+# Verander componCentration naar numeriek
+c.elegans_data$compConcentration <- as.numeric(c.elegans_data$compConcentration)
+
+# grafiek maken met Log10 van compConcentrion en het toevoegen van geom_jitter  om de plot leesbaarder te maken
+ggplot(data = c.elegans_data, aes(x = log10(compConcentration), y = RawData, color = compName, shape = expType)) +
+  geom_jitter(width = 0.2) +
+  labs(title = "Effect van de verbindingsconcentratie op de hoeveelheid levende C. elegans",
+       x = "Aantal nakomelingen",
+       y = "Concentratie van compound") +
+  theme_minimal()
+```
+
+
+Vergeleken met de vorige grafiek wordt hier de variabele compConcentration omgezet naar numeriek (en ook de log10 ervan overgenomen). Geom_jitter wordt ook gebruikt, zodat datapunten niet te veel overlappen.
+
+De positieve controle voor dit experiment is Ethanol. De negatieve controle voor dit experiment is S-medium.
+
+oor een statistische analyse om te bepalen of er inderdaad een verschil is, zou ik:
+- Shapiro-Wilk normaalheidstest uitvoeren: om te beoordelen of de data een normale verdeling heeft.
+- Levene's test uitvoeren: om te onderzoeken of er variabiliteit is binnen de data.
+- T-test uitvoeren (indien de data normaal verdeeld is dus de p waarde is groter dan 0,05): om te zien of er een significant verschil is. 
+
+```{r genormaliseerde plot, warning=FALSE, message=FALSE}
+# filtr negatieve controle
+data_negatieve_controle <- c.elegans_data %>% filter(c.elegans_data$expType == "controlNegative")
+
+# Breken de gemiddelde voor de negative controle
+gemiddelde_control <- mean(data_negatieve_controle$RawData, na.rm = TRUE)
+
+# groepen en summerize
+summary_celegans <- c.elegans_data %>% group_by(expType, compName, compConcentration) %>% summarize(mean = mean(RawData, na.rm = TRUE))
+
+# Voeg een genormaliseerde kolom toe aan de dataset
+data_normalized <- summary_celegans %>%
+  mutate(RawData_normalized = mean / gemiddelde_control)
+
+# grafiek maken
+ggplot(data = data_normalized, aes(x = log10(compConcentration), y = RawData_normalized)) +
+  geom_jitter(aes(color = compName, shape = compName),width = 0.08)+
+  labs(title = "Aantal nakomelingen per concentratie (genormaliseerd)",
+        x = "log10 Concentratie van compound",
+       y = "Genormaliseerd aantal nakomelingen"
+      ) +
+  theme_minimal()
+
+```
+
+Door te normaliseren tegen de negatieve controle is eenvoudig te zien of een verbinding effect heeft op de hoeveelheid c.elegans. Bovendien is dit nuttig omdat de negatieve controle "normaal" is en dit geen effect zou moeten hebben op de c.elegans. De negatieve controle is dus gelijk aan één.
+
+
+
+
