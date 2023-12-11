@@ -10,13 +10,13 @@ linkedin: Fatima Danawar
 date: "`r format(Sys.time(), '%B %Y')`"
 output: vitae::moderncv
 ---
-
+# CV
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
 ```
 
-# Sommige dingen over mij
+## Sommige dingen over mij
 
  * Ik ben gevlucht van mijn land door de oorlog naar Nederland van 5 jaar geleden
  * Ik ben student en moeder voor drie kinderen in het zelfde tijd
@@ -26,11 +26,11 @@ library(vitae)
  * Mijn specialisatie is BMR(Bio-Moleculaire Research)
  * Ik ben ambitieus en ik wil mijn doel bereiken.
 
-# Doelstelling:
+## Doelstelling:
 Enthousiaste Life Science student op zoek naar een uitdagende stage om praktische ervaring op te doen in [ genetica afdeling] en vooral bij erfelijke ziekten en hoe worden de mutaties gedetecteerd.
 
 
-# Opleidingen
+## Opleidingen
 
 ```{r}
 library(tibble)
@@ -47,7 +47,7 @@ tribble(
   detailed_entries(Degree, Year, Institution, Where)
 ```
 
-# Werkervaring
+## Werkervaring
 
 ```{r}
 tribble(
@@ -63,7 +63,7 @@ tribble(
   )
 ```
 
-# Laboratorium-Tools:
+## Laboratorium-Tools:
  Tijdens de Life science opleiding heb ik veel dingen in het lab geleerd als:
  
  * Basis labtools als(pipetteren, centrigugeren, gel-elektroforrese, DNA-RNA isloeren,PCR,...)
@@ -72,7 +72,7 @@ tribble(
  * SDS-page en western-plot
  * AKte-prime 
  
-# Data Science Tools:
+## Data Science Tools:
  Tijdens dit opleiding mijn minor is data science dus ik heb heel veel dingen geleerd om de data te analyseren zoals:
  
  * Basis programeren tools.
@@ -82,17 +82,17 @@ tribble(
  * Metagenomics
 
  
-# Onderzoek en Projecten:
+## Onderzoek en Projecten:
  * Microbiologie project: een project om influenza A te identificieren met behulp van qPCR en werd ook tijdens dit project primers ontworpen.
  * Farmacon project: een farmacon( midazolam) werd aan c.elegans toegenomen en daarne werd all effecten genoteerd.
  * Project gens and protein: gen van intersse werd gekloneerd met behulp van plasmide en aantal controls.
  
-# Vaardigheden:
+## Vaardigheden:
  * MC: Word, Excel, Powerpoint
  * SPSS programma
  * Rijbewijs B
  
-# Talen:
+## Talen:
  * Arabisch: mijn moeder taal
  * Nederlands: Tweede taal, niveau B2
  * Engels: niveau B2
@@ -100,7 +100,7 @@ tribble(
  * Turks: niveau A2
  
  
-# Publications
+## Publications
 
 ```{r}
 library(dplyr)

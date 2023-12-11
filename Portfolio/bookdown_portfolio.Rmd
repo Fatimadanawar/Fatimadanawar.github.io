@@ -1,0 +1,202 @@
+---
+title: "Portfolio"
+author: "Fatima"
+date: "2024"
+site: bookdown::bookdown_site
+documentclass: book
+new_session: yes
+output:
+  bookdown::gitbook:
+    highlight: tango
+bibliography: [book.bib]
+params:
+  country: "Netherlands"
+  year: "2024"
+  continent: "Europe"
+
+  
+  #bookdown::pdf_book: default
+---
+---
+title: "Portfolio"
+author: "Fatima"
+date: "2024"
+site: bookdown::bookdown_site
+documentclass: book
+new_session: yes
+output:
+  bookdown::gitbook:
+    highlight: tango
+bibliography: [book.bib]
+params:
+  country: "Netherlands"
+  year: "2024"
+  continent: "Europe"
+
+  
+  #bookdown::pdf_book: default
+---
+
+<!--chapter:end:index.Rmd-->
+
+
+# Voorbeeld data analyse ( Analyse van C. elegans Plaatexperiment)
+
+Placeholder
+
+
+
+<!--chapter:end:C_elegans_plaatexperiment.Rmd-->
+
+---
+name: Fatima
+surname: Danawar
+position: "Student Life Science in Hogeschool Utrecht"
+address: "Institute for Life Sciences & Chemistry, Hogeschool Utrecht"
+phone: 06-21282608
+email: "fatima.danawar@student.hu.nl"
+github: Fatimadanawar
+linkedin: Fatima Danawar
+date: "`r format(Sys.time(), '%B %Y')`"
+output: vitae::moderncv
+---
+# CV
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+## Sommige dingen over mij
+
+ * Ik ben gevlucht van mijn land door de oorlog naar Nederland van 5 jaar geleden
+ * Ik ben student en moeder voor drie kinderen in het zelfde tijd
+ * Ik heb Farmacie opleiding gestudeerd in mijn land maar niet afgemaakt.
+ * Ik ben nu bezig met B Life Science HBO opleiding
+ * Mijn minor is data science
+ * Mijn specialisatie is BMR(Bio-Moleculaire Research)
+ * Ik ben ambitieus en ik wil mijn doel bereiken.
+
+## Doelstelling:
+Enthousiaste Life Science student op zoek naar een uitdagende stage om praktische ervaring op te doen in [ genetica afdeling] en vooral bij erfelijke ziekten en hoe worden de mutaties gedetecteerd.
+
+
+## Opleidingen
+
+```{r}
+library(tribble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "B Life Science opleiding", "2020- heden", "Hogeschool Utrecht HU", "Utrecht, Nederland",
+  "Farmacie Opleiding", "2014-2016", "Albaath Universiteit", "Homs, Syrie",
+  "Middelbareschool", "2010-2013", "Alchansaaschool", "Hama, Syrie",
+  "Basisschool onderwijs", "2000-2009", "Hyteenschool", "Hama, Syrie"
+  
+  
+    
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
+```
+
+## Werkervaring
+
+```{r}
+tribble(
+  ~Year, ~Type, ~Desc,
+   2018, "Vrijwilligerswerk", "Ik heb gewerkt als vrijwiliger in taalcafe in het achterhoek wijk van Nederland",
+  2015, "Apotheker-assistent", "Ik ben gewerkt voor ongeveer een jaar tijdens mijn studie in het Apotheek in mijn land als apotheker-assistent"
+ 
+) %>% 
+  brief_entries(
+    glue::glue("Werkervaring als {Type}"),
+    Year, 
+    Desc
+  )
+```
+
+## Laboratorium-Tools:
+ Tijdens de Life science opleiding heb ik veel dingen in het lab geleerd als:
+ 
+ * Basis labtools als(pipetteren, centrigugeren, gel-elektroforrese, DNA-RNA isloeren,PCR,...)
+ * qPCR: wij hebben qPCR uitgevoerd om het influenzavirus te identificeren.
+ * ELISA
+ * SDS-page en western-plot
+ * AKte-prime 
+ 
+## Data Science Tools:
+ Tijdens dit opleiding mijn minor is data science dus ik heb heel veel dingen geleerd om de data te analyseren zoals:
+ 
+ * Basis programeren tools.
+ * Programmeertalen zoals R en Bash.
+ * NGS ( next generation sequencing)
+ * RNA sequencing
+ * Metagenomics
+
+ 
+## Onderzoek en Projecten:
+ * Microbiologie project: een project om influenza A te identificieren met behulp van qPCR en werd ook tijdens dit project primers ontworpen.
+ * Farmacon project: een farmacon( midazolam) werd aan c.elegans toegenomen en daarne werd all effecten genoteerd.
+ * Project gens and protein: gen van intersse werd gekloneerd met behulp van plasmide en aantal controls.
+ 
+## Vaardigheden:
+ * MC: Word, Excel, Powerpoint
+ * SPSS programma
+ * Rijbewijs B
+ 
+## Talen:
+ * Arabisch: mijn moeder taal
+ * Nederlands: Tweede taal, niveau B2
+ * Engels: niveau B2
+ * Frans: niveau A2
+ * Turks: niveau A2
+ 
+ 
+## Publications
+
+```{r}
+library(dplyr)
+knitr::write_bib(c("vitae", "tibble"), "packages.bib")
+
+bibliography_entries("packages.bib") %>%
+  arrange(desc(author$family), issued)
+```
+
+
+<!--chapter:end:CV.Rmd-->
+
+
+# Doel: 
+
+Placeholder
+
+
+## Dag 1 : Data voorbereiden en uitlijnen:
+## Dag 2: Variant calling en mutatie-identificatie
+## Dag 3: Verfijnen en rapporteren
+
+<!--chapter:end:Leerplan.Rmd-->
+
+
+# Reproducibility
+
+Placeholder
+
+
+## Artikel kezien en werken met het
+### Reference van dit artikel:
+### Criteria van dit artikel
+### Meer informatie over dit artikel
+### Werken met code van artikel (R code paper)
+### Data management ----
+### Output ----
+
+<!--chapter:end:Peerreview_openen.Rmd-->
+
+
+# Relationele databases en SQL
+
+Placeholder
+
+
+
+<!--chapter:end:SQL.Rmd-->
+
