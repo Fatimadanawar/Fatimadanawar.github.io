@@ -139,7 +139,7 @@ grid.arrange(samenvogende_sqlscript)
 
 Het laden van de samengevoegde table 
 ```{r ladan van de samengevoegde table}
-samengevoegde_table_data <- read.csv(here("data/samenvoegende_table_202312111108.csv"))
+samengevoegde_table_data <- read.csv(here("data/samenvoegende_table_202312111229.csv"))
 ## laten we de inhoud zien
 datatable(samengevoegde_table_data, options = list(scrollx=TRUE, pageLength = 10))
 ```
@@ -151,4 +151,35 @@ In dit project heb ik gegevens samengevoegd van verschillende tabellen en beschr
 summary(samengevoegde_table_data)
 
 ## Visualisatie 1: 
+africa_flu_aantal <- samengevoegde_table_data %>% select(year, country, continent, flu_aantal) %>% filter(continent == "Americas",
+                  !is.na(flu_aantal))                      
+
+africa_flu_aantal_summary <- africa_flu_aantal %>%
+  group_by(country) %>% summarise(mean = mean(flu_aantal, na.rm = TRUE), stedv = sd(flu_aantal, na.rm= TRUE))
+
+africa_flu_aantal_summary %>% ggplot(aes(x = as.factor(country), y = mean, group = country, fill = country)) +
+  geom_col() +
+  labs()
+
+## Visualisatie 2:
+
+canda_US_summary <- africa_flu_aantal %>% select(country,flu_aantal) %>% filter(country %in% c("Canada", "United States")) %>% group_by(country) %>% summarise(mean = mean(flu_aantal), stdev = sd(flu_aantal))
+
+canda_US_summary %>% ggplot(aes(x= country, y= mean, group= country, fill = country)) +
+  geom_col() +
+  geom_errorbar(aes(ymin=mean-stdev, ymax=mean+stdev), width=.2) +
+  labs(title ="gemiddelde flu aantal in Canada en in US" ,
+       x="Country",
+       y="Flu aantal gemiddeld")
+
+## Visualisatie 3:
+
+life_ex_flu <- samengevoegde_table_data %>% select(year,continent, life_expectancy,flu_aantal) %>% filter(continent == "Europe" ,!is.na(flu_aantal))
+
+life_ex_flu %>% group_by(year,continent) %>%
+  mutate(flu_gem = mean(flu_aantal, na.rm = TRUE)) %>%
+  ggplot(aes(x= year, y = flu_gem)) +
+  geom_line(aes(colour = continent))
+
+  
 ```
