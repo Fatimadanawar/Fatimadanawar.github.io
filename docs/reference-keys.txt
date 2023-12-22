@@ -3,6 +3,7 @@ over-mij
 curriculum-vitae
 mijn-cv-met-vitae-r-package
 script
+mijn-toekomst-en-gatk-tools
 doel
 huidige-status
 volgende-vaardigheden-om-te-leren
@@ -22,6 +23,7 @@ maak-verbinding-met-de-database
 samenvoegende-table-van-alle-drie-data
 drie-statistieken-met-samenvogende-table
 data-managment-met-gruerrilla-analytics-structure
+r-package
 parameterized-covid-19-report
 slootwater-project
 inleiding-tot-het-project
