@@ -1,0 +1,27 @@
+---
+title: "bibliography"
+author: "Fatima Danawar"
+date: "2023-12-19"
+output: html_document
+bibliography: bibliography.bib
+---
+# Slootwater Project
+In deze sectie zal ik kort een project introduceren gerelateerd aan metagenomica van slootwater, waaraan ik heb gewerkt tijdens mijn minor Data Science. Met deze introductie wil ik aantonen dat ik kennis heb van levenswetenschappelijk onderzoek en schrijftechnieken, evenals het gebruik van rmarkdown als communicatiemiddel. Citaten zijn opgenomen via de Zotero-webextensie.
+
+## Inleiding tot het Project
+
+Metagenomica is gedefinieerd als het sequencen van totaal genoom DNA dat direct is verkregen uit een specifiek milieu, zoals slootwater. Het doel is inzicht te krijgen in welke microbiele organismen aanwezig zijn en in welke verhoudingen. Vanuit de HogeSchool zijn er twee projecten die gebruik maken van metagenomics, waaronder het slootwaterproject.
+
+Het slootwaterproject betreft een metagenomica-analyse van lang leesbaar MinION-data. Hiervoor is een dataset gebruikt die is verkregen uit een slootwatermonster dat door ILC-studenten is geïsoleerd en bewerkt voor metagenomica-analyse op de MinION. De FastQ-bestanden zijn beschikbaar op de server.
+
+### Referenties
+
+Citaties zijn essentieel voor het begrijpen van metagenomics-analyse. De volgende referenties bieden waardevolle inzichten in metagenomics-classificatie met verschillende tools:
+
+1. **KrakenUniq:** Deze tool combineert snelle k-mer-gebaseerde classificatie met een efficiënt algoritme voor het beoordelen van de dekking van unieke k-mers die in elke soort in een dataset worden gevonden, en biedt zelfverzekerde en snelle metagenomics-classificatie [@breitwieserKrakenUniqConfidentFast2018].
+
+2. **Kraken 2:** Een verbetering ten opzichte van Kraken 1, Kraken 2 vermindert het geheugengebruik aanzienlijk, waardoor grotere hoeveelheden referentiegenomische gegevens kunnen worden gebruikt, met behoud van hoge nauwkeurigheid en een vijfvoudige snelheidsverhoging [@woodImprovedMetagenomicAnalysis2019].
+
+3. **Kraken:** Een ultra snelle metagenomische sequentieclassificatietool die gebruikmaakt van exacte uitlijningen, waardoor snelle taxonomische classificatie van metagenomische sequentiegegevens mogelijk is [@woodKrakenUltrafastMetagenomic2014].
+
+

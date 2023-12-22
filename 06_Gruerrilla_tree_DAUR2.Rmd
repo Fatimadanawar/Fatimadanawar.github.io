@@ -1,0 +1,6 @@
+# Data managment met Gruerrilla analytics structure
+ In dit opdracht heb ik een tree gemaakt voor DAUR2 mapje met behulp van Gruerrilla analytics structure
+ 
+```{r}
+fs::dir_tree(here::here("DAUR2"))
+```

@@ -4,6 +4,9 @@ curriculum-vitae
 mijn-cv-met-vitae-r-package
 script
 doel
+huidige-status
+volgende-vaardigheden-om-te-leren
+leerplan
 dag-1-data-voorbereiden-en-uitlijnen
 dag-2-variant-calling-en-mutatie-identificatie
 dag-3-verfijnen-en-rapporteren
@@ -14,11 +17,12 @@ reference-van-dit-artikel
 criteria-van-dit-artikel
 meer-informatie-over-dit-artikel
 werken-met-code-van-artikel-r-code-paper
-data-management--
-output--
 relationele-databases-en-sql
 maak-verbinding-met-de-database
-sql-scripts-voor-het-schrijven-van-tabellen-naar-de-database-vanuit-dataframes
 samenvoegende-table-van-alle-drie-data
 drie-statistieken-met-samenvogende-table
 data-managment-met-gruerrilla-analytics-structure
+parameterized-covid-19-report
+slootwater-project
+inleiding-tot-het-project
+referenties

@@ -1,0 +1,92 @@
+---
+title: "Covid_data parameters"
+author: "Fatima Danawar"
+date: "2023-12-18"
+output: 
+   html_document:
+    toc: true
+    template: default
+params:
+ country:
+   label: "country:"
+   value: Netherlands
+   input: select
+   choices: [Austria, Belgium, Bulgaria, Croatia, Cyprus, Czechia, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Netherlands, Norway, Romania, Slovakia, Slovenia, Spain, Sweden]
+ year:
+   label: "Year"
+   value: 2022
+   input: slider
+   min: 2020
+   max: 2022
+   step: 1
+   sep: ""
+ month:
+   label: "month:"
+   value: October
+   input: select
+   choices: [January, February, March, April, May, June, July, August, September, October, November, December]
+---
+
+
+# Parameterized COVID-19 report
+
+Het doel van deze hoofdstuk is het maken van een Rmarkdown-bestand met daarin een __Parameterized COVID-19 report__.
+<br>
+De Rmd bevat drie parameters:
+- Het land `country` waarop het rapport van toepassing is
+- Het jaar  `year` waarop de gerapporteerde gegevens betrekking hebben
+- De periode in maanden `month` waaropde rapport betrekking heeft
+
+Nadat deze Rmarkdown met parameters heeft geknit, worden twee plots gemaakt, één met __covid-sterfgevall__ en één met __covid-gevallen__ in het gegeven land, jaar en maand.
+<br>
+Beginnen met het laden van de benodigde libraries
+```{r laden libraries, message=FALSE, warning=FALSE}
+library(readr)
+library(tidyverse)
+library(stringr)
+library(tibble)
+library(here)
+```
+
+Het laden van de data tot een object
+```{r, message=FALSE, warning=FALSE}
+# data laden
+data_covid19 <- read_csv(here("data", "data_covid19.csv"))
+knitr::kable(head(data_covid19))
+
+# Converteer maandnummers naar maandnamen
+data_covid19$month <- month.name[data_covid19$month]
+
+# De date kolom verandert de type naar as.Date type
+data_covid19$dateRep <- as.Date(data_covid19$dateRep, tryFormats = c("%d/%m/%y"))
+
+# Laat nu de data zien
+knitr::kable(head(data_covid19))
+
+# Filter de gegevens op het geslecteerde land en jaar 
+filtered_data_covid <- data_covid19 %>%
+  filter(
+    countriesAndTerritories == params$country,
+    year == as.integer(params$year),
+    month == params$month)
+
+knitr::kable(head(filtered_data_covid))  
+
+```
+In het ondersaande chunk zijn er twee plots gemaakt. Eén voor __COVID-19-gevallen__ in `r params$country` in `r params$month` van `r params$year`. En één voor __COVID-19-sterfgevallen__
+
+```{r plots }
+# plot maken voor COVID-19 gevallen
+filtered_data_covid %>% ggplot(aes(x = dateRep, y = cases)) +
+  geom_point() +
+  geom_line() +
+  labs(title = paste("COVID-19 gevallen in" , params$country , params$month , params$year , sep = " "))
+ 
+# plot maken voor COVID-19 sterfgevallen
+filtered_data_covid %>% ggplot(aes(x = dateRep, y = deaths)) +
+  geom_point(aes(color = "yellow")) +
+  geom_line(aes(color = "black")) +
+  theme(legend.position = "none") +
+  labs(title = paste("COVID-19 sterfgevallen in" , params$country , params$month , params$year))
+
+``` 
