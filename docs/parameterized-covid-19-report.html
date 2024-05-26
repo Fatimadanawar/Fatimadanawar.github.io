@@ -190,7 +190,8 @@ div.csl-indent {
 <li class="chapter" data-level="3.4.3" data-path="mijn-toekomst-en-gatk-tools.html"><a href="mijn-toekomst-en-gatk-tools.html#dag-3-variant-calling-pipeline"><i class="fa fa-check"></i><b>3.4.3</b> Dag 3: Variant Calling Pipeline</a></li>
 </ul></li>
 <li class="chapter" data-level="3.5" data-path="mijn-toekomst-en-gatk-tools.html"><a href="mijn-toekomst-en-gatk-tools.html#voorbereiding"><i class="fa fa-check"></i><b>3.5</b> Voorbereiding</a></li>
-<li class="chapter" data-level="3.6" data-path="mijn-toekomst-en-gatk-tools.html"><a href="mijn-toekomst-en-gatk-tools.html#evaluatie"><i class="fa fa-check"></i><b>3.6</b> Evaluatie</a></li>
+<li class="chapter" data-level="3.6" data-path="mijn-toekomst-en-gatk-tools.html"><a href="mijn-toekomst-en-gatk-tools.html#resultaten"><i class="fa fa-check"></i><b>3.6</b> Resultaten</a></li>
+<li class="chapter" data-level="3.7" data-path="mijn-toekomst-en-gatk-tools.html"><a href="mijn-toekomst-en-gatk-tools.html#evaluatie"><i class="fa fa-check"></i><b>3.7</b> Evaluatie</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="voorbeeld-data-analyse-analyse-van-c.-elegans-plaatexperiment.html"><a href="voorbeeld-data-analyse-analyse-van-c.-elegans-plaatexperiment.html"><i class="fa fa-check"></i><b>4</b> Voorbeeld data analyse ( Analyse van C. elegans Plaatexperiment)</a></li>
 <li class="chapter" data-level="5" data-path="reproducibility.html"><a href="reproducibility.html"><i class="fa fa-check"></i><b>5</b> Reproducibility</a>
@@ -251,13 +252,13 @@ De Rmd bevat drie parameters:
 De parameterized Rmarkdown is beschikbaar via <a href="https://github.com/Fatimadanawar/Workflow-Portfolio/tree/main/document/params.Rmd">github</a></p>
 <p>met behulp van webshot heb ik een screenshot gemaakt van de geparametriseerde Rmarkdown HTML die ik heb gemaakt, dus het zou gemakkelijker zijn om een voorbeeld van deze oefening te bekijken op github-pagina’s.</p>
 <p>Laten we zien in de parameterized Rmarkdown van de standaardinstelling is Nederland October 2022</p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="parameterized-covid-19-report.html#cb69-1" tabindex="-1"></a><span class="co"># screenshot maken van html met behlup van functie webshot</span></span>
-<span id="cb69-2"><a href="parameterized-covid-19-report.html#cb69-2" tabindex="-1"></a>webshot<span class="sc">::</span><span class="fu">webshot</span>(<span class="st">&quot;document/params.html&quot;</span>, <span class="st">&quot;Images/params.png&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="parameterized-covid-19-report.html#cb46-1" tabindex="-1"></a><span class="co"># screenshot maken van html met behlup van functie webshot</span></span>
+<span id="cb46-2"><a href="parameterized-covid-19-report.html#cb46-2" tabindex="-1"></a>webshot<span class="sc">::</span><span class="fu">webshot</span>(<span class="st">&quot;document/params.html&quot;</span>, <span class="st">&quot;Images/params.png&quot;</span>)</span></code></pre></div>
 <p><img src="bookdown_portfolio_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
 <p>Params testing: Om parameters te testen gebruiken we de volgende functie en kunnen we daar welke parameters willen en selecteren.</p>
-<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="parameterized-covid-19-report.html#cb70-1" tabindex="-1"></a><span class="co">#rmarkdown::render(&quot;document/params.Rmd&quot;, params = list(country = &quot;Belgium&quot;, year = 2020, month = &quot;April&quot;), output_file = &quot;belgium_2020_April&quot;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="parameterized-covid-19-report.html#cb47-1" tabindex="-1"></a><span class="co">#rmarkdown::render(&quot;document/params.Rmd&quot;, params = list(country = &quot;Belgium&quot;, year = 2020, month = &quot;April&quot;), output_file = &quot;belgium_2020_April&quot;)</span></span></code></pre></div>
 <p>Hier kunnen we de resultaten van vorige stap zien als webshot</p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="parameterized-covid-19-report.html#cb71-1" tabindex="-1"></a>webshot<span class="sc">::</span><span class="fu">webshot</span>(<span class="st">&quot;document/belgium_2020_April.html&quot;</span>, <span class="st">&quot;Images/belgium_2020_April.png&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="parameterized-covid-19-report.html#cb48-1" tabindex="-1"></a>webshot<span class="sc">::</span><span class="fu">webshot</span>(<span class="st">&quot;document/belgium_2020_April.html&quot;</span>, <span class="st">&quot;Images/belgium_2020_April.png&quot;</span>)</span></code></pre></div>
 <p><img src="bookdown_portfolio_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
 <p>Nadat u de resultaten heeft gecontroleerd, kunt u zien dat de parameters werken en voor andere landen en data kunnen worden gebruikt.</p>
 

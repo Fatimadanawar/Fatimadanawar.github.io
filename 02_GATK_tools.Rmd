@@ -182,7 +182,7 @@ cat ${results}/analysis-ready-indels.vcf | grep -v -E "DP_filter|GQ_filter" > ${
 
 ```
 
-##Resultaten
+## Resultaten
 
 ___Kwaliteitscontrole en Mapping___
 De kwaliteit van de sequencing reads werd beoordeeld en bleek acceptabel te zijn, wat het vermogen om tot nauwkeurige mapping te komen, ondersteunde. Gedurende het mappingproces met BWA deden zich geen noemenswaardige problemen voor, wat resulteerde in een succesvolle toewijzing van de reads naar het referentiegenoom.
@@ -211,7 +211,7 @@ library(grid)
 library(png)
 library(gridExtra)
 ```
-De hele script `variant_calling.sh` van deze opdrchat kun je vinden in [github](https://github.com/Fatimadanawar/Workflow-Portfolio/tree/main/GATK_tools/variant_calling.sh)
+De hele script `variant_calling.sh` van deze opdrchat kun je vinden in [variant_calling script](https://github.com/Fatimadanawar/Workflow-Portfolio/tree/main/GATK_tools/variant_calling.sh)
 en hier kun je de data managment tree van de `results folder`
 
 ```{r}
@@ -219,7 +219,7 @@ results_folder_tree <- rasterGrob(as.raster(readPNG(here("GATK_tools/results_fol
 grid.arrange(results_folder_tree)
 ```
 Hier kun je de snps varianten zien en op welke regeio en zijn effect
-voor meer informatie kun je zien in deze file `snpEff_snps_summary.html` [github](https://github.com/Fatimadanawar/Workflow-Portfolio/tree/main/GATK_tools/snpEff_snps_summary.html
+voor meer informatie kun je zien in deze file `snpEff_snps_summary.html` [snpEff snps summary](https://github.com/Fatimadanawar/Workflow-Portfolio/tree/main/GATK_tools/snpEff_snps_summary.html)
 ```{r}
 varianten_snps <- rasterGrob(as.raster(readPNG(here("GATK_tools/varianten_by_snps.png"))))
 grid.arrange(varianten_snps)
@@ -230,7 +230,7 @@ grid.arrange(regio_effect_snps)
 ```
 
 Hier kun je de snps varianten zien en op welke regeio en zijn effect
-voor meer informatie kun je zien in deze file `snpEff_indels_summary.html` [github](https://github.com/Fatimadanawar/Workflow-Portfolio/tree/main/GATK_tools/snpEff_indels_summary.html
+voor meer informatie kun je zien in deze file `snpEff_indels_summary.html` [snpEff endels summary](https://github.com/Fatimadanawar/Workflow-Portfolio/tree/main/GATK_tools/snpEff_indels_summary.html)
 
 ```{r}
 varianten_indels <- rasterGrob(as.raster(readPNG(here("GATK_tools/varianten_by_indels.png"))))

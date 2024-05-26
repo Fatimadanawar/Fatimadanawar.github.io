@@ -54,7 +54,7 @@ In termen van leesbaarheid van de code zou ik deze een 3 op 5 geven. Want ik heb
 Als ik zou moeten schalen hoe gemakkelijk de plot is om te reproduceren waarbij 1 heel moeilijk is, en 5 heel gemakkelijk, zou ik het een 5 geven. Dit komt omdat het enige dat veranderd moest worden het pad voor het invoerbestand was.
 
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 today <- "2021-10-18" #Set today's date in format YYYY-MM-DD
 
 # Load files ----

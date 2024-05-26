@@ -12,6 +12,7 @@ dag-1-project-initiatie-tool-setup
 dag-2-data-voorbereiden-voor-analyse
 dag-3-variant-calling-pipeline
 voorbereiding
+resultaten
 evaluatie
 voorbeeld-data-analyse-analyse-van-c.-elegans-plaatexperiment
 reproducibility
@@ -30,4 +31,3 @@ parameterized-covid-19-report
 slootwater-project
 inleiding-tot-het-project
 referenties
-sql-scripts-voor-het-schrijven-van-tabellen-naar-de-database-vanuit-dataframes

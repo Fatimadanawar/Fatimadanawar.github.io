@@ -190,7 +190,8 @@ div.csl-indent {
 <li class="chapter" data-level="3.4.3" data-path="mijn-toekomst-en-gatk-tools.html"><a href="mijn-toekomst-en-gatk-tools.html#dag-3-variant-calling-pipeline"><i class="fa fa-check"></i><b>3.4.3</b> Dag 3: Variant Calling Pipeline</a></li>
 </ul></li>
 <li class="chapter" data-level="3.5" data-path="mijn-toekomst-en-gatk-tools.html"><a href="mijn-toekomst-en-gatk-tools.html#voorbereiding"><i class="fa fa-check"></i><b>3.5</b> Voorbereiding</a></li>
-<li class="chapter" data-level="3.6" data-path="mijn-toekomst-en-gatk-tools.html"><a href="mijn-toekomst-en-gatk-tools.html#evaluatie"><i class="fa fa-check"></i><b>3.6</b> Evaluatie</a></li>
+<li class="chapter" data-level="3.6" data-path="mijn-toekomst-en-gatk-tools.html"><a href="mijn-toekomst-en-gatk-tools.html#resultaten"><i class="fa fa-check"></i><b>3.6</b> Resultaten</a></li>
+<li class="chapter" data-level="3.7" data-path="mijn-toekomst-en-gatk-tools.html"><a href="mijn-toekomst-en-gatk-tools.html#evaluatie"><i class="fa fa-check"></i><b>3.7</b> Evaluatie</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="voorbeeld-data-analyse-analyse-van-c.-elegans-plaatexperiment.html"><a href="voorbeeld-data-analyse-analyse-van-c.-elegans-plaatexperiment.html"><i class="fa fa-check"></i><b>4</b> Voorbeeld data analyse ( Analyse van C. elegans Plaatexperiment)</a></li>
 <li class="chapter" data-level="5" data-path="reproducibility.html"><a href="reproducibility.html"><i class="fa fa-check"></i><b>5</b> Reproducibility</a>
@@ -325,48 +326,7 @@ Mijn keuze viel op het artikel ‘Infection fatality rate of COVID-19 in communi
 <p>Deze R-code lijkt te zijn geschreven voor een analyse van de infectie-sterftecijfers (IFR) van COVID-19 in verschillende leeftijdsgroepen, met speciale aandacht voor oudere populaties. Het script verwerkt gegevens uit een Excel-bestand (ifr-data3-younger.xlsx) en voert een reeks bewerkingen en analyses uit.</p>
 <p>In termen van leesbaarheid van de code zou ik deze een 3 op 5 geven. Want ik heb errors geregen vanwege niet alle benodigde libraries zijn staan in de code, en het plot zelf is beetje moeilijk om te lezen want daar staan verschillende lijnen die sneden aan elkaar dus de plot niet goed leesbaar.</p>
 <p>Als ik zou moeten schalen hoe gemakkelijk de plot is om te reproduceren waarbij 1 heel moeilijk is, en 5 heel gemakkelijk, zou ik het een 5 geven. Dit komt omdat het enige dat veranderd moest worden het pad voor het invoerbestand was.</p>
-<pre><code>## 
-## Attaching package: &#39;rlang&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:purrr&#39;:
-## 
-##     %@%, flatten, flatten_chr, flatten_dbl, flatten_int, flatten_lgl,
-##     flatten_raw, invoke, splice</code></pre>
-<pre><code>## Warning: There were 2 warnings in `mutate()`.
-## The first warning was:
-## ℹ In argument: `deaths_agebins_date1 = case_when(...)`.
-## Caused by warning:
-## ! NAs introduced by coercion
-## ℹ Run `dplyr::last_dplyr_warnings()` to see the 1 remaining warning.</code></pre>
-<pre><code>## [1] 13</code></pre>
-<pre><code>## [1] 13</code></pre>
-<pre><code>## [1] 13</code></pre>
-<pre><code>## [1] 13</code></pre>
-<pre><code>## [1] 13</code></pre>
-<pre><code>## [1] 9</code></pre>
-<pre><code>## [1] 6</code></pre>
-<pre><code>## [1] 21</code></pre>
-<pre><code>## [1] 13</code></pre>
-<pre><code>## # A tibble: 6 × 2
-##   newmidpoint ifr_mdn_weighted
-##   &lt;chr&gt;                  &lt;dbl&gt;
-## 1 10                  0.000998
-## 2 25                  0.00967 
-## 3 35                  0.0229  
-## 4 45                  0.0503  
-## 5 55                  0.149   
-## 6 65                  0.491</code></pre>
-<pre><code>## [1] 13</code></pre>
-<pre><code>## [1] 13</code></pre>
-<pre><code>## [1] 13</code></pre>
-<pre><code>## [1] 13</code></pre>
-<pre><code>## [1] 13</code></pre>
-<pre><code>## [1] 9</code></pre>
-<pre><code>## [1] 6</code></pre>
-<pre><code>## Warning: Transformation introduced infinite values in continuous y-axis</code></pre>
-<pre><code>## Warning: Transformation introduced infinite values in continuous y-axis</code></pre>
 <p><img src="bookdown_portfolio_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
-<pre><code>## png 
-##   2</code></pre>
 
 </div>
 </div>
