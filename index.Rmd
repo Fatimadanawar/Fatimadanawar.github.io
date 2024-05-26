@@ -5,6 +5,7 @@ date: "26/05/2024"
 site: bookdown::bookdown_site
 documentclass: book
 new_session: yes
+bibliography: [book.bib]
 output:
   bookdown::gitbook:
     highlight: tango
