@@ -1,14 +1,50 @@
-p.caption {
-  color: #777;
-  margin-top: 10px;
+/* Algemeen */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0f7fa; /* Lichtblauwe achtergrond */
+  color: #0277bd; /* Donkerblauwe tekstkleur */
 }
-p code {
-  white-space: inherit;
+
+/* Koppen */
+h1, h2, h3 {
+  color: #01579b; /* Diepblauwe kleur voor koppen */
 }
-pre {
-  word-break: normal;
-  word-wrap: normal;
+
+/* Paragrafen */
+p {
+  line-height: 1.6;
+  margin-bottom: 10px;
 }
-pre code {
-  white-space: inherit;
+
+/* Code blokken */
+code {
+  background-color: #e1f5fe; /* Lichtblauwe achtergrond voor code */
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: #01579b; /* Donkerblauwe kleur voor code */
+}
+
+/* Tabellen */
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table th {
+  background-color: #b3e5fc; /* Lichte blauwe achtergrond voor tabel headers */
+  text-align: left;
+}
+
+/* Links */
+a {
+  color: #0288d1; /* Helderblauwe kleur voor links */
+}
+
+a:hover {
+  color: #01579b; /* Donkerblauwe kleur voor links bij hover */
 }

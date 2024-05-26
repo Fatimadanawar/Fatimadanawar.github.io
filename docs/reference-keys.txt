@@ -31,4 +31,3 @@ parameterized-covid-19-report
 slootwater-project
 inleiding-tot-het-project
 referenties
-sql-scripts-voor-het-schrijven-van-tabellen-naar-de-database-vanuit-dataframes

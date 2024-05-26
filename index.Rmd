@@ -8,6 +8,7 @@ new_session: yes
 bibliography: [book.bib]
 output:
   bookdown::gitbook:
+    css: "style.css"
     highlight: tango
 params:
   country: "Netherlands"
