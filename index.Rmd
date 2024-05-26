@@ -1,14 +1,13 @@
 ---
-title: "Portfolio"
+title: "Data Science for biology Portfolio"
 author: "Fatima Danawar"
-date: "2024"
+date: "26/05/2024"
 site: bookdown::bookdown_site
 documentclass: book
 new_session: yes
 output:
   bookdown::gitbook:
     highlight: tango
-bibliography: [book.bib]
 params:
   country: "Netherlands"
   year: "2024"

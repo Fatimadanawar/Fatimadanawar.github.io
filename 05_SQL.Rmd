@@ -1,7 +1,5 @@
 ---
-title: "Relationele databases en SQL"
 author: "Fatima Danawar"
-date: "2023-12-10"
 output: html_document
 ---
 

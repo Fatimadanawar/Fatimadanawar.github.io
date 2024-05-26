@@ -1,7 +1,5 @@
 ---
-title: "Leerplan"
 author: "Fatima Danawar"
-date: "2023-11-21"
 output: html_document
 ---
 # Mijn toekomst en GATK tools 

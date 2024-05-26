@@ -1,7 +1,5 @@
 ---
-title: "bibliography"
 author: "Fatima Danawar"
-date: "2023-12-19"
 output: html_document
 bibliography: bibliography.bib
 ---
