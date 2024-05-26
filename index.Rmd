@@ -9,6 +9,9 @@ bibliography: [book.bib]
 output:
   bookdown::gitbook:
     css: "style.css"
+    config:
+      toc:
+        collapse: section
     highlight: tango
 params:
   country: "Netherlands"

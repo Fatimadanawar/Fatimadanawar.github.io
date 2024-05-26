@@ -2,7 +2,7 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #e0f7fa; /* Lichtblauwe achtergrond */
-  color: #0277bd; /* Donkerblauwe tekstkleur */
+ color:#01579b; /* Diepblauwe kleur */
 }
 
 /* Koppen */
@@ -14,6 +14,7 @@ h1, h2, h3 {
 p {
   line-height: 1.6;
   margin-bottom: 10px;
+  color: #000; /* Zwarte tekstkleur */
 }
 
 /* Code blokken */
@@ -31,8 +32,9 @@ code {
 }
 
 .table th, .table td {
-  border: 1px solid #ddd;
+  border: 1px solid #0277bd; /* Donkerblauwe rand */
   padding: 8px;
+  color: #0277bd; /* Donkerblauwe tekstkleur */
 }
 
 .table th {
@@ -47,4 +49,57 @@ a {
 
 a:hover {
   color: #01579b; /* Donkerblauwe kleur voor links bij hover */
+}
+
+/* TOC achtergrond */
+.book .book-summary {
+  background-color: #e0f2f1; /* Lichtere blauwe achtergrond voor TOC */
+}
+
+/* TOC links */
+.book .book-summary a {
+  color: #e0f7fa; /* Lichtblauwe kleur voor TOC links */
+}
+
+.book .book-summary a:hover {
+  color: #b3e5fc; /* Nog lichtere blauwe kleur voor TOC links bij hover */
+}
+
+/* TOC sectie headers */
+.book .book-summary .summary .chapter {
+  border-bottom: 1px solid #0288d1; /* Blauwe lijn onder sectie headers */
+}
+
+/* Navigeerbare pagina's */
+.book .book-body {
+  background-color: #e0f7fa; /* Lichtblauwe achtergrond voor de inhoud van het boek */
+  color:#01579b; /* Diepblauwe kleur; */
+}
+
+/* Knoppen en highlights */
+.book .book-body .btn {
+  background-color: #01579b; /* Blauwe achtergrond voor knoppen */
+  color: #e0f7fa; /* Lichtblauwe tekstkleur voor knoppen */
+}
+
+.book .book-body .btn:hover {
+  background-color: #0288d1; /* Iets lichtere blauwe achtergrond bij hover */
+  color: #e0f7fa; /* Lichtblauwe tekstkleur bij hover */
+}
+
+/* Footer */
+.book .book-footer {
+  background-color: #01579b; /* Blauwe achtergrond voor de footer */
+  color: #e0f7fa; /* Lichtblauwe tekstkleur in de footer */
+}
+
+/* Zoekbalk */
+.book .book-search input {
+  background-color: #e1f5fe; /* Lichtblauwe achtergrond voor zoekbalk */
+  color: #01579b; /* Donkerblauwe tekstkleur in zoekbalk */
+}
+
+/* Zoekbalk focus */
+.book .book-search input:focus {
+  border-color: #0288d1; /* Blauwe rand bij focus */
 }
