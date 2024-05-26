@@ -166,7 +166,7 @@ div.csl-indent {
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">Fatima Danawar portfolio</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Portfolio Inleiding</a>
@@ -185,10 +185,12 @@ div.csl-indent {
 <li class="chapter" data-level="3.3" data-path="mijn-toekomst-en-gatk-tools.html"><a href="mijn-toekomst-en-gatk-tools.html#volgende-vaardigheden-om-te-leren"><i class="fa fa-check"></i><b>3.3</b> Volgende Vaardigheden om te leren:</a></li>
 <li class="chapter" data-level="3.4" data-path="mijn-toekomst-en-gatk-tools.html"><a href="mijn-toekomst-en-gatk-tools.html#leerplan"><i class="fa fa-check"></i><b>3.4</b> Leerplan:</a>
 <ul>
-<li class="chapter" data-level="3.4.1" data-path="mijn-toekomst-en-gatk-tools.html"><a href="mijn-toekomst-en-gatk-tools.html#dag-1-data-voorbereiden-en-uitlijnen"><i class="fa fa-check"></i><b>3.4.1</b> Dag 1 : Data voorbereiden en uitlijnen:</a></li>
-<li class="chapter" data-level="3.4.2" data-path="mijn-toekomst-en-gatk-tools.html"><a href="mijn-toekomst-en-gatk-tools.html#dag-2-variant-calling-en-mutatie-identificatie"><i class="fa fa-check"></i><b>3.4.2</b> Dag 2: Variant calling en mutatie-identificatie</a></li>
-<li class="chapter" data-level="3.4.3" data-path="mijn-toekomst-en-gatk-tools.html"><a href="mijn-toekomst-en-gatk-tools.html#dag-3-verfijnen-en-rapporteren"><i class="fa fa-check"></i><b>3.4.3</b> Dag 3: Verfijnen en rapporteren</a></li>
+<li class="chapter" data-level="3.4.1" data-path="mijn-toekomst-en-gatk-tools.html"><a href="mijn-toekomst-en-gatk-tools.html#dag-1-project-initiatie-tool-setup"><i class="fa fa-check"></i><b>3.4.1</b> Dag 1 : Project Initiatie &amp; Tool Setup</a></li>
+<li class="chapter" data-level="3.4.2" data-path="mijn-toekomst-en-gatk-tools.html"><a href="mijn-toekomst-en-gatk-tools.html#dag-2-data-voorbereiden-voor-analyse"><i class="fa fa-check"></i><b>3.4.2</b> Dag 2: Data voorbereiden voor analyse</a></li>
+<li class="chapter" data-level="3.4.3" data-path="mijn-toekomst-en-gatk-tools.html"><a href="mijn-toekomst-en-gatk-tools.html#dag-3-variant-calling-pipeline"><i class="fa fa-check"></i><b>3.4.3</b> Dag 3: Variant Calling Pipeline</a></li>
 </ul></li>
+<li class="chapter" data-level="3.5" data-path="mijn-toekomst-en-gatk-tools.html"><a href="mijn-toekomst-en-gatk-tools.html#voorbereiding"><i class="fa fa-check"></i><b>3.5</b> Voorbereiding</a></li>
+<li class="chapter" data-level="3.6" data-path="mijn-toekomst-en-gatk-tools.html"><a href="mijn-toekomst-en-gatk-tools.html#evaluatie"><i class="fa fa-check"></i><b>3.6</b> Evaluatie</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="voorbeeld-data-analyse-analyse-van-c.-elegans-plaatexperiment.html"><a href="voorbeeld-data-analyse-analyse-van-c.-elegans-plaatexperiment.html"><i class="fa fa-check"></i><b>4</b> Voorbeeld data analyse ( Analyse van C. elegans Plaatexperiment)</a></li>
 <li class="chapter" data-level="5" data-path="reproducibility.html"><a href="reproducibility.html"><i class="fa fa-check"></i><b>5</b> Reproducibility</a>
@@ -239,6 +241,16 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="r-package" class="section level1 hasAnchor" number="8">
 <h1><span class="header-section-number">8</span> R Package<a href="r-package.html#r-package" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Hier heb ik een R-pakket gemaakt genaamd CovidPackage. Dit pakket is ontwikkeld om te assisteren bij de analyse van COVID-19-gegevens. Elke functie binnen dit pakket heeft een specifieke rol bij het verwerken, analyseren of visualiseren van informatie die gerelateerd is aan COVID-19.</p>
+<p>En die R package kun je zien in mijn githup <a href="https://github.com/Fatimadanawar/CovidPackage">github</a>.</p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="r-package.html#cb67-1" tabindex="-1"></a><span class="co"># install.packages(&quot;devtools&quot;)</span></span>
+<span id="cb67-2"><a href="r-package.html#cb67-2" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;Fatimadanawar/CovidPackage&quot;</span>, <span class="at">build_vignettes =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<p>Hier is een voorbeeld van een functie binnen deze R package.</p>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="r-package.html#cb68-1" tabindex="-1"></a>CovidPackage<span class="sc">::</span><span class="fu">plot_dagelijkse_gevallen</span>(data_covid, <span class="st">&quot;Netherlands&quot;</span>)</span></code></pre></div>
+<div class="float">
+<img src="document/Rpackage_plot.png" alt="Dagelijkse gevallen in Nederland" />
+<div class="figcaption">Dagelijkse gevallen in Nederland</div>
+</div>
 
 </div>
             </section>

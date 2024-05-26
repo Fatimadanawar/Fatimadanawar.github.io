@@ -8,9 +8,11 @@ doel
 huidige-status
 volgende-vaardigheden-om-te-leren
 leerplan
-dag-1-data-voorbereiden-en-uitlijnen
-dag-2-variant-calling-en-mutatie-identificatie
-dag-3-verfijnen-en-rapporteren
+dag-1-project-initiatie-tool-setup
+dag-2-data-voorbereiden-voor-analyse
+dag-3-variant-calling-pipeline
+voorbereiding
+evaluatie
 voorbeeld-data-analyse-analyse-van-c.-elegans-plaatexperiment
 reproducibility
 artikel-kezien-en-werken-met-het

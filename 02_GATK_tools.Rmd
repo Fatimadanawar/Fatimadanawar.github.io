@@ -205,24 +205,39 @@ java -jar ${tools}/snpEff/snpEff.jar hg38 ${results}/analysis-ready-indels-filte
 ```
 
 ```{r, message=FALSE, warning=FALSE, include=FALSE}
+library(here)
+library(dplyr)
+library(grid)
 library(png)
-library(webshot)
 library(gridExtra)
 ```
 De hele script `variant_calling.sh` van deze opdrchat kun je vinden in [github](https://github.com/Fatimadanawar/Workflow-Portfolio/tree/main/GATK_tools/variant_calling.sh)
 en hier kun je de data managment tree van de `results folder`
 
-```{r sql script van het samenvoegen van alle drie data tot een table}
+```{r}
 results_folder_tree <- rasterGrob(as.raster(readPNG(here("GATK_tools/results_folder_tree.png"))))
 grid.arrange(results_folder_tree)
 ```
+Hier kun je de snps varianten zien en op welke regeio en zijn effect
+voor meer informatie kun je zien in deze file `snpEff_snps_summary.html` [github](https://github.com/Fatimadanawar/Workflow-Portfolio/tree/main/GATK_tools/snpEff_snps_summary.html
+```{r}
+varianten_snps <- rasterGrob(as.raster(readPNG(here("GATK_tools/varianten_by_snps.png"))))
+grid.arrange(varianten_snps)
+
+regio_effect_snps <- rasterGrob(as.raster(readPNG(here("GATK_tools/region_effect_snps.png"))))
+grid.arrange(regio_effect_snps)
+
+```
+
+Hier kun je de snps varianten zien en op welke regeio en zijn effect
+voor meer informatie kun je zien in deze file `snpEff_indels_summary.html` [github](https://github.com/Fatimadanawar/Workflow-Portfolio/tree/main/GATK_tools/snpEff_indels_summary.html
 
 ```{r}
-# screenshot maken van snps html met behlup van functie webshot
-webshot::webshot("GATK_tools/snpEff_snps_summary.html", "GATK_tools/snps.png")
+varianten_indels <- rasterGrob(as.raster(readPNG(here("GATK_tools/varianten_by_indels.png"))))
+grid.arrange(varianten_indels)
 
-# screenshot maken van indels html met behlup van functie webshot
-webshot::webshot("GATK_tools/snpEff_indels_summary.html", "GATK_tools/indels.png")
+regio_effect_indels <- rasterGrob(as.raster(readPNG(here("GATK_tools/region_effect_indels.png"))))
+grid.arrange(regio_effect_indels)
 
 ```
 
@@ -249,7 +264,7 @@ datatable(snpEff_genes_snps, options = list(scrollx=TRUE))
 datatable(snpEff_genes_indels, options = list(scrollx=TRUE))
 ```
 
-##Evaluatie
+## Evaluatie
 
 Dit project bood een uiterst leerzame ervaring en gaf mij de gelegenheid om praktijkervaring op te doen met variant calling en de bijbehorende tools. Ondanks de beperkte tijd ben ik tevreden met de behaalde resultaten en heb ik veel geleerd over de verschillende stappen en uitdagingen in het proces van variant calling. Deze hands-on ervaring heeft mijn begrip van bioinformatica aanzienlijk verbeterd en heeft mij waardevolle inzichten gegeven in de complexiteit van genoomanalyse. Ik kijk ernaar uit om deze verworven kennis verder uit te breiden en toe te passen in toekomstige projecten, waarbij ik mijn vaardigheden verder zal ontwikkelen en mijn bijdrage aan het vakgebied zal vergroten.
 
