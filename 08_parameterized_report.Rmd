@@ -8,7 +8,7 @@ Het doel van deze hoofdstuk is het maken van een Rmarkdown-bestand met daarin ee
 - De periode in maanden `month` waaropde rapport betrekking heeft
 
 Nadat deze Rmarkdown met parameters heeft geknit, worden twee plots gemaakt, één met __covid-sterfgevall__ en één met __covid-gevallen__ in het gegeven land, jaar en maand.
-De parameterized Rmarkdown is beschikbaar via [github](https://github.com/Fatimadanawar/Workflow-Portfolio/tree/main/document/opdracht9_parameter_covid19.Rmd)
+De parameterized Rmarkdown is beschikbaar via [github](https://github.com/Fatimadanawar/Workflow-Portfolio/tree/main/document/params.Rmd)
 
 ```{r, message=FALSE, warning=FALSE, include=FALSE}
 library(png)
