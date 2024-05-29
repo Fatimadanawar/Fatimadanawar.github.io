@@ -306,7 +306,7 @@ Om data op te laden gebruik ik hier “read_excel()” functie samen met “here
 <span id="cb18-7"><a href="voorbeeld-data-analyse-analyse-van-c.-elegans-plaatexperiment.html#cb18-7" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Aantal nakomelingen&quot;</span>,</span>
 <span id="cb18-8"><a href="voorbeeld-data-analyse-analyse-van-c.-elegans-plaatexperiment.html#cb18-8" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Concentratie van compound&quot;</span>) <span class="sc">+</span></span>
 <span id="cb18-9"><a href="voorbeeld-data-analyse-analyse-van-c.-elegans-plaatexperiment.html#cb18-9" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
-<p><img src="bookdown_portfolio_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p><img src="bookdown_portfolio_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
 <p>Omdat de compConcentration variable als character datatype is, is het niet de juiste plot uitzien.</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="voorbeeld-data-analyse-analyse-van-c.-elegans-plaatexperiment.html#cb19-1" tabindex="-1"></a><span class="co"># Verander componCentration naar numeriek</span></span>
 <span id="cb19-2"><a href="voorbeeld-data-analyse-analyse-van-c.-elegans-plaatexperiment.html#cb19-2" tabindex="-1"></a>c.elegans_data<span class="sc">$</span>compConcentration <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(c.elegans_data<span class="sc">$</span>compConcentration)</span>
@@ -318,7 +318,7 @@ Om data op te laden gebruik ik hier “read_excel()” functie samen met “here
 <span id="cb19-8"><a href="voorbeeld-data-analyse-analyse-van-c.-elegans-plaatexperiment.html#cb19-8" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">&quot;Aantal nakomelingen&quot;</span>,</span>
 <span id="cb19-9"><a href="voorbeeld-data-analyse-analyse-van-c.-elegans-plaatexperiment.html#cb19-9" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">&quot;Concentratie van compound&quot;</span>) <span class="sc">+</span></span>
 <span id="cb19-10"><a href="voorbeeld-data-analyse-analyse-van-c.-elegans-plaatexperiment.html#cb19-10" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
-<p><img src="bookdown_portfolio_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<p><img src="bookdown_portfolio_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
 <p>Vergeleken met de vorige grafiek wordt hier de variabele compConcentration omgezet naar numeriek (en ook de log10 ervan overgenomen). Geom_jitter wordt ook gebruikt, zodat datapunten niet te veel overlappen.</p>
 <p>De positieve controle voor dit experiment is Ethanol. De negatieve controle voor dit experiment is S-medium.</p>
 <p>oor een statistische analyse om te bepalen of er inderdaad een verschil is, zou ik:

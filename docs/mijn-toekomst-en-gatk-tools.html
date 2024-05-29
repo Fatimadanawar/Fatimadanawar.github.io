@@ -280,6 +280,7 @@ div.csl-indent {
 </div>
 <div id="voorbereiding" class="section level2 hasAnchor" number="3.5">
 <h2><span class="header-section-number">3.5</span> Voorbereiding<a href="mijn-toekomst-en-gatk-tools.html#voorbereiding" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="bookdown_portfolio_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p><strong><em>Stap 1: Installeren van Benodigde Software</em></strong>
 De installatie van de benodigde softwarepakketten en tools werd gestart. Een conda-omgeving werd gebruikt om de dependencies te beheren.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="mijn-toekomst-en-gatk-tools.html#cb1-1" tabindex="-1"></a><span class="co"># Maak een nieuwe conda omgeving aan en activeer deze</span></span>
@@ -424,23 +425,23 @@ Na de filtering werden de overgebleven varianten geannoteerd met SnpEff. Deze an
 en hier kun je de data managment tree van de <code>results folder</code></p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="mijn-toekomst-en-gatk-tools.html#cb7-1" tabindex="-1"></a>results_folder_tree <span class="ot">&lt;-</span> <span class="fu">rasterGrob</span>(<span class="fu">as.raster</span>(<span class="fu">readPNG</span>(<span class="fu">here</span>(<span class="st">&quot;GATK_tools/results_folder_tree.png&quot;</span>))))</span>
 <span id="cb7-2"><a href="mijn-toekomst-en-gatk-tools.html#cb7-2" tabindex="-1"></a><span class="fu">grid.arrange</span>(results_folder_tree)</span></code></pre></div>
-<p><img src="bookdown_portfolio_files/figure-html/unnamed-chunk-8-1.png" width="672" />
+<p><img src="bookdown_portfolio_files/figure-html/unnamed-chunk-10-1.png" width="672" />
 Hier kun je de snps varianten zien en op welke regeio en zijn effect
 voor meer informatie kun je zien in deze file <code>snpEff_snps_summary.html</code> <a href="https://github.com/Fatimadanawar/Workflow-Portfolio/tree/main/GATK_tools/snpEff_snps_summary.html">snpEff snps summary</a></p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="mijn-toekomst-en-gatk-tools.html#cb8-1" tabindex="-1"></a>varianten_snps <span class="ot">&lt;-</span> <span class="fu">rasterGrob</span>(<span class="fu">as.raster</span>(<span class="fu">readPNG</span>(<span class="fu">here</span>(<span class="st">&quot;GATK_tools/varianten_by_snps.png&quot;</span>))))</span>
 <span id="cb8-2"><a href="mijn-toekomst-en-gatk-tools.html#cb8-2" tabindex="-1"></a><span class="fu">grid.arrange</span>(varianten_snps)</span></code></pre></div>
-<p><img src="bookdown_portfolio_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="bookdown_portfolio_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="mijn-toekomst-en-gatk-tools.html#cb9-1" tabindex="-1"></a>regio_effect_snps <span class="ot">&lt;-</span> <span class="fu">rasterGrob</span>(<span class="fu">as.raster</span>(<span class="fu">readPNG</span>(<span class="fu">here</span>(<span class="st">&quot;GATK_tools/region_effect_snps.png&quot;</span>))))</span>
 <span id="cb9-2"><a href="mijn-toekomst-en-gatk-tools.html#cb9-2" tabindex="-1"></a><span class="fu">grid.arrange</span>(regio_effect_snps)</span></code></pre></div>
-<p><img src="bookdown_portfolio_files/figure-html/unnamed-chunk-9-2.png" width="672" /></p>
+<p><img src="bookdown_portfolio_files/figure-html/unnamed-chunk-11-2.png" width="672" /></p>
 <p>Hier kun je de snps varianten zien en op welke regeio en zijn effect
 voor meer informatie kun je zien in deze file <code>snpEff_indels_summary.html</code> <a href="https://github.com/Fatimadanawar/Workflow-Portfolio/tree/main/GATK_tools/snpEff_indels_summary.html">snpEff endels summary</a></p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="mijn-toekomst-en-gatk-tools.html#cb10-1" tabindex="-1"></a>varianten_indels <span class="ot">&lt;-</span> <span class="fu">rasterGrob</span>(<span class="fu">as.raster</span>(<span class="fu">readPNG</span>(<span class="fu">here</span>(<span class="st">&quot;GATK_tools/varianten_by_indels.png&quot;</span>))))</span>
 <span id="cb10-2"><a href="mijn-toekomst-en-gatk-tools.html#cb10-2" tabindex="-1"></a><span class="fu">grid.arrange</span>(varianten_indels)</span></code></pre></div>
-<p><img src="bookdown_portfolio_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><img src="bookdown_portfolio_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="mijn-toekomst-en-gatk-tools.html#cb11-1" tabindex="-1"></a>regio_effect_indels <span class="ot">&lt;-</span> <span class="fu">rasterGrob</span>(<span class="fu">as.raster</span>(<span class="fu">readPNG</span>(<span class="fu">here</span>(<span class="st">&quot;GATK_tools/region_effect_indels.png&quot;</span>))))</span>
 <span id="cb11-2"><a href="mijn-toekomst-en-gatk-tools.html#cb11-2" tabindex="-1"></a><span class="fu">grid.arrange</span>(regio_effect_indels)</span></code></pre></div>
-<p><img src="bookdown_portfolio_files/figure-html/unnamed-chunk-10-2.png" width="672" /></p>
+<p><img src="bookdown_portfolio_files/figure-html/unnamed-chunk-12-2.png" width="672" /></p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="mijn-toekomst-en-gatk-tools.html#cb12-1" tabindex="-1"></a><span class="co"># de snpEff_genes_snps data laden in datatable</span></span>
 <span id="cb12-2"><a href="mijn-toekomst-en-gatk-tools.html#cb12-2" tabindex="-1"></a><span class="fu">datatable</span>(snpEff_genes_snps, <span class="at">options =</span> <span class="fu">list</span>(<span class="at">scrollx=</span><span class="cn">TRUE</span>))</span></code></pre></div>
 <div class="datatables html-widget html-fill-item" id="htmlwidget-0d2ff13f3d3c476524d1" style="width:100%;height:auto;"></div>

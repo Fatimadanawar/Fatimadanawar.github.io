@@ -253,12 +253,12 @@ De parameterized Rmarkdown is beschikbaar via <a href="https://github.com/Fatima
 <p>Laten we zien in de parameterized Rmarkdown van de standaardinstelling is Nederland October 2022</p>
 <div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="parameterized-covid-19-report.html#cb46-1" tabindex="-1"></a><span class="co"># screenshot maken van html met behlup van functie webshot</span></span>
 <span id="cb46-2"><a href="parameterized-covid-19-report.html#cb46-2" tabindex="-1"></a>webshot<span class="sc">::</span><span class="fu">webshot</span>(<span class="st">&quot;document/params.html&quot;</span>, <span class="st">&quot;Images/params.png&quot;</span>)</span></code></pre></div>
-<p><img src="bookdown_portfolio_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p><img src="bookdown_portfolio_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
 <p>Params testing: Om parameters te testen gebruiken we de volgende functie en kunnen we daar welke parameters willen en selecteren.</p>
 <div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="parameterized-covid-19-report.html#cb47-1" tabindex="-1"></a><span class="co">#rmarkdown::render(&quot;document/params.Rmd&quot;, params = list(country = &quot;Belgium&quot;, year = 2020, month = &quot;April&quot;), output_file = &quot;belgium_2020_April&quot;)</span></span></code></pre></div>
 <p>Hier kunnen we de resultaten van vorige stap zien als webshot</p>
 <div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="parameterized-covid-19-report.html#cb48-1" tabindex="-1"></a>webshot<span class="sc">::</span><span class="fu">webshot</span>(<span class="st">&quot;document/belgium_2020_April.html&quot;</span>, <span class="st">&quot;Images/belgium_2020_April.png&quot;</span>)</span></code></pre></div>
-<p><img src="bookdown_portfolio_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<p><img src="bookdown_portfolio_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
 <p>Nadat u de resultaten heeft gecontroleerd, kunt u zien dat de parameters werken en voor andere landen en data kunnen worden gebruikt.</p>
 
 </div>

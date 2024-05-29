@@ -34,6 +34,20 @@ De volgende vaardigheid die ik moet leren, is het effectief gebruik van GATK-too
 
 
 ## Voorbereiding
+```{r, message=FALSE, warning=FALSE, include=FALSE}
+library(here)
+library(dplyr)
+library(grid)
+library(png)
+library(gridExtra)
+```
+
+
+```{r, echo=FALSE}
+gatk_stappen <- rasterGrob(as.raster(readPNG(here("GATK_tools/gatk_stappen.png"))))
+grid.arrange(gatk_stappen)
+```
+
 ___Stap 1: Installeren van Benodigde Software___
 De installatie van de benodigde softwarepakketten en tools werd gestart. Een conda-omgeving werd gebruikt om de dependencies te beheren.
 
